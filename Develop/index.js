@@ -1,9 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const renderLicenseBadge = require('./utils/generateMarkdown.js')
 
 const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, questions }) => 
 `
-${title}
+## ${title}
 ## Description
 ${description}
 ## Table of Contents
@@ -18,7 +19,7 @@ ${installation}
 ## Usage
 ${usage}
 ## License
-${license}
+${renderLicenseBadge(license[0])}
 ## Contributing
 ${contributing}
 ## Tests
@@ -73,7 +74,7 @@ inquirer
 ])
 .then((answers) => {
   const readMeContent = generateReadMe(answers);
-
+  console.log(answers);
   fs.writeFile('README.md', readMeContent, (err) => 
   err ? console.log(err) : console.log('Successfully created README.md!')
   );
