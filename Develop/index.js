@@ -1,7 +1,9 @@
+// variables defined for inquirer and require
 const inquirer = require('inquirer');
 const fs = require('fs');
 const renderLicenseBadge = require('./utils/generateMarkdown.js')
 
+// Function to generate the README with this template
 const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, questions }) => 
 `
 ## ${title}
@@ -28,6 +30,7 @@ ${tests}
 ${questions}
 `;
 
+// inquirer method to store all the questions
 inquirer
 .prompt([
   {
@@ -74,7 +77,7 @@ inquirer
 ])
 .then((answers) => {
   const readMeContent = generateReadMe(answers);
-  console.log(answers);
+  // Function to generate the README with the answers inputed 
   fs.writeFile('README.md', readMeContent, (err) => 
   err ? console.log(err) : console.log('Successfully created README.md!')
   );
