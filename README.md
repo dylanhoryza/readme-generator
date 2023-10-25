@@ -13,11 +13,8 @@
 To install this project, open this index.js file in your integrated terminal. Type the command node index in the terminal to run the application.
 You then will be prompted with several questions that will help fill out your README file. 
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-   ```md
-   ![alt text](assets/images/screenshot.png)
-   ```
+The video link below will show you step by step instructions on how to use the application.
+https://drive.google.com/file/d/1t1eQmXZriszsNH04w9UZpknHawDvAI4q/view
 ## Contributing
 My tutuor, Mila Hose, helped me with the final step of adding the license badge image and link.
 ## License
